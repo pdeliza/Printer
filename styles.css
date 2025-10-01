@@ -349,7 +349,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
-    height: 6.5rem; /*altura del card*/
+    height: 6rem; /*altura del card*/
 }
 
 .voucher-logo {
