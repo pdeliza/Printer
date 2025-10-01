@@ -613,7 +613,7 @@ h1 {
     /* margin: 0 5px; */
     font-size: 0.9rem;
     font-weight: 900;
-    margin-top: -0.1rem;
+    /* margin-top: -0.1rem; */
 }
 
 #transactionTime {
