@@ -771,6 +771,18 @@ h1 {
         left: 15px;
         width: 100px;
     }
+
+    .advertising-logo {
+        text-align: center;
+        padding: 10px 5px;
+        margin-top: 30px;
+    }
+    
+    .advertising-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -850,6 +862,18 @@ h1 {
     .message-icon {
         width: 25px; /* Tamaño reducido para móviles */
         height: 35px; /* Tamaño reducido para móviles */
+    }
+
+    .advertising-logo {
+        text-align: center;
+        padding: 10px 5px;
+        margin-top: 30px;
+    }
+    
+    .advertising-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
     }
 }
 
