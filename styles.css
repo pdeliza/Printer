@@ -688,13 +688,14 @@ h1 {
 }
 
 .transaction-info h2 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #777;
     text-align: left;
     margin-bottom: 15px;
     text-transform: uppercase;
     font-weight: bold;
     font-family: 'Roboto', Arial, sans-serif;
+    letter-spacing: 0.5px;
 }
 
 .info-item {
@@ -816,7 +817,7 @@ h1 {
         font-weight: bold;
         font-family: 'Roboto', Arial, sans-serif;
         color: #807F82;
-        gap: 12px; /*aleja el icono hacia la derecha*/
+        gap: 8px; /*aleja el icono hacia la derecha*/
         white-space: nowrap;
         padding: 5px 0; /*aumenta el tamaño*/
         letter-spacing: 0.5px;
