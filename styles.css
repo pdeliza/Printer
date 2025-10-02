@@ -708,11 +708,13 @@ h1 {
 .info-label {
     color: #4b4160;
     font-family: Arial, sans-serif;
+    font-size: 1rem;
 }
 
 .info-value {
     color: #2c2044;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .voucher-actions {
