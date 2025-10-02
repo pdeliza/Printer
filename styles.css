@@ -383,8 +383,8 @@ h1 {
 }
 
 .close-button {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #8B3D99;
     color: white;
@@ -728,7 +728,7 @@ h1 {
     padding: 15px;
     font-size: 1.1rem; */
     width: 100%;
-    padding: 10px 15px;
+    padding: 3px 15px;
     font-size: 1rem;
     display: flex;
     justify-content: center;
@@ -736,12 +736,23 @@ h1 {
     gap: 10px;
     background-color: var(--green-color);
     border-color: var(--green-color);
+    font-family: 'Roboto', Arial, sans-serif;;
+    /* font-size: 1rem; */
 }
 
 .advertising-logo {
-    text-align: center;
+    /* text-align: center;
     padding: 10px 5px;
-    margin-top: 30px;
+    margin-top: 30px; */
+
+    background-image: url('img/advertising.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 80px; /* Ajusta según tu imagen */
+    margin: 10px auto;
+    text-align: center;
 }
 
 .advertising-image {
@@ -856,6 +867,14 @@ h1 {
     .message-icon {
         width: 25px; /* Tamaño reducido para móviles */
         height: 35px; /* Tamaño reducido para móviles */
+    }
+
+    .advertising-logo {
+        background-image: url('img/advertising.jpg');
+        background-size: contain;
+        height: 60px; /* Altura reducida para móvil */
+        margin: 8px auto;
+        display: block !important;
     }
 }
 
