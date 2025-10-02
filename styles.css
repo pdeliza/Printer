@@ -482,7 +482,7 @@ h1 {
 }
 
 .transaction-details {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     padding: 0;
     margin-top: -5px;
 }
@@ -627,7 +627,7 @@ h1 {
 .security-section {
     border-top: 1px solid #e9ecef;
     border-bottom: 1px solid #e9ecef;
-    padding: 11px 0;
+    padding: 8px 0;
     margin-bottom: 20px;
 }
 
