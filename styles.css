@@ -819,6 +819,7 @@ h1 {
         gap: 12px; /*aleja el icono hacia la derecha*/
         white-space: nowrap;
         padding: 5px 0; /*aumenta el tamaño*/
+        letter-spacing: 0.5px;
     }
 
     .security-code {
