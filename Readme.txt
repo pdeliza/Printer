@@ -1,1 +1,1 @@
-Para fines educacionales
+Sólo con fines educacionales
