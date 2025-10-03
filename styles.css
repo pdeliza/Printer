@@ -740,25 +740,21 @@ h1 {
     /* font-size: 1rem; */
 }
 
-.advertising-logo {
-    /* text-align: center;
-    padding: 10px 5px;
-    margin-top: 30px; */
-
-    background-image: url('./img/advertising.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+.advertising-video-container {
     width: 100%;
-    height: 80px; /* Ajusta según tu imagen */
+    height: 150px; /* Altura del video */
     margin: 10px auto;
-    text-align: center;
+    border-radius: 18px; /* Mismo radio que voucher-card */
+    overflow: hidden; /* Esencial para border-radius */
+    display: block !important;
 }
 
-.advertising-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+/* VIDEO PUBLICITARIO */
+.advertising-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video al contenedor */
+    border-radius: 18px; /* Bordes redondeados */
 }
 
 
@@ -869,12 +865,9 @@ h1 {
         height: 35px; /* Tamaño reducido para móviles */
     }
 
-    .advertising-logo {
-        background-image: url('./img/advertising.jpg');
-        background-size: contain;
-        height: 60px; /* Altura reducida para móvil */
+    .advertising-video-container {
+        height: 120px; /* Altura reducida para móvil */
         margin: 8px auto;
-        display: block !important;
     }
 }
 
