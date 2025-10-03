@@ -684,7 +684,7 @@ h1 {
 
 .transaction-info {
     margin-top: 15px;
-    margin-bottom: 0px;
+    margin-bottom: -5px;
 }
 
 .transaction-info h2 {
