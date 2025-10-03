@@ -742,7 +742,7 @@ h1 {
 
 .advertising-video-container {
     width: 100%;
-    height: 150px; /* Altura del video */
+    height: 100%; /* Altura del video */
     margin: 10px auto;
     border-radius: 18px; /* Mismo radio que voucher-card */
     overflow: hidden; /* Esencial para border-radius */
@@ -866,8 +866,9 @@ h1 {
     }
 
     .advertising-video-container {
-        height: 120px; /* Altura reducida para móvil */
-        margin: 8px auto;
+        height: 100%; /* Altura reducida para móvil */
+        margin: 30px auto;
+        padding: 0 10px;
     }
 }
 
