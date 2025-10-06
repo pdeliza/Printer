@@ -45,8 +45,10 @@ addForm.addEventListener('submit', (e) => {
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
     const qrcode = document.getElementById('qrcode').value;
+    const isSpecial = document.getElementById('isSpecial').checked || false; // ✅ Nuevo campo
+
     
-    contacts.push({ name, phone, qrcode });
+    contacts.push({ name, phone, qrcode, isSpecial });
     localStorage.setItem('contacts', JSON.stringify(contacts));
     
     filteredContacts = [...contacts];
@@ -103,8 +105,17 @@ function renderTable() {
             // Guardar datos para la página de pago
             localStorage.setItem('currentRecipient', JSON.stringify({ name, phone }));
             
-            // Redirigir a pay.html
-            window.location.href = 'pay.html';
+            // ✅ Verificar si es cliente especial
+            const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+            const currentContact = contacts.find(contact => 
+                contact.name === name && contact.phone === phone
+            );
+            
+            if (currentContact && currentContact.isSpecial) {
+                window.location.href = 'voucherservice.html';
+            } else {
+                window.location.href = 'pay.html';
+            }
         });
     });
 }
