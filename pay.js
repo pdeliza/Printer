@@ -62,6 +62,18 @@ payNowBtn.addEventListener('click', () => {
     
     localStorage.setItem('currentTransaction', JSON.stringify(transactionData));
     
-    // Redirigir a voucher.html
-    window.location.href = 'voucher.html';
+    // ✅ NUEVO: Verificar si es cliente especial
+    const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+    const currentContact = contacts.find(contact => 
+        contact.name === recipientData.name && contact.phone === recipientData.phone
+    );
+    
+    // Redirigir según tipo de cliente
+    if (currentContact && currentContact.isSpecial) {
+        // Cliente especial → voucherservice.html
+        window.location.href = 'voucherservice.html';
+    } else {
+        // Cliente normal → voucher.html
+        window.location.href = 'voucher.html';
+    }
 });
