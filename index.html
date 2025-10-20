@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4A1971">
+    <title>Comprobante Educacional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.0/dist/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Comprobante Educacional</h1>
+            <button id="addBtn" class="btn-primary">Add</button>
+        </header>
+
+        <div class="table-controls">
+            <div class="entries-selector">
+                <span>Show</span>
+                <select id="entriesPerPage">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                <span>entries</span>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+
+        <table id="dataTable" class="data-table">
+            <thead>
+                <tr>
+                    <th>Names</th>
+                    <th>Phone</th>
+                    <th>QRcodeApp</th>
+                    <th>PhoneApp</th>
+                    <th>Voucher</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Los datos se cargarán dinámicamente con JavaScript -->
+            </tbody>
+        </table>
+
+        <div class="table-footer">
+            <div id="tableInfo" class="table-info">Showing 0 to 0 of 0 entries</div>
+            <div class="pagination" id="pagination">
+                <!-- La paginación se generará con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar datos -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Contact</h2>
+            <form id="addForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="qrcode">QR Code:</label>
+                    <input type="text" id="qrcode" required>
+                </div>
+                <div class="form-group">
+                    <label for="isSpecial" style="display: flex; align-items: center; gap: 8px;">
+                        <input type="checkbox" id="isSpecial">
+                        Cliente Especial
+                    </label>
+                </div>
+                <button type="submit" class="btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.0/dist/umd/simple-datatables.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

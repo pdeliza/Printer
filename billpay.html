@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4A1971">
+    <title>Comprobante Educacional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container billpay-container">
+        <header class="billpay-header">
+            <h1>Hola, <span id="userName">Usuario</span></h1>
+        </header>
+
+        <div class="balance-section">
+            <div class="balance-amount">S/ <span id="balance">0.00</span></div>
+            <button id="toggleBalance" class="btn-toggle">Mostrar saldo</button>
+        </div>
+
+        <div class="quick-actions">
+            <div class="action-item">
+                <div class="action-icon">📱</div>
+                <div class="action-label">Recargar celular</div>
+            </div>
+            <div class="action-item">
+                <div class="action-icon">💡</div>
+                <div class="action-label">Yapear servicios</div>
+            </div>
+            <div class="action-item">
+                <div class="action-icon">🎁</div>
+                <div class="action-label">Promos</div>
+            </div>
+            <div class="action-item">
+                <div class="action-icon">✅</div>
+                <div class="action-label">Aprobar compras</div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-icon">💳</div>
+                <div class="service-label">Créditos</div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🛒</div>
+                <div class="service-label">Tienda</div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">💵</div>
+                <div class="service-label">Dólares</div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🌎</div>
+                <div class="service-label">Remesas</div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🚗</div>
+                <div class="service-label">SOAT</div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🚌</div>
+                <div class="service-label">Viajar en bus</div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🎫</div>
+                <div class="service-label">Entradas</div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">👀</div>
+                <div class="service-label">Ver todo</div>
+            </div>
+        </div>
+
+        <div class="bottom-buttons">
+            <button id="scanQR" class="btn-primary large-btn">ESCANEAR QR</button>
+            <button id="payBtn" class="btn-secondary large-btn">PAGAR</button>
+        </div>
+    </div>
+
+    <script src="billpay.js"></script>
+</body>
+</html>

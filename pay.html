@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4A1971">
+    <title>Comprobante Educacional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container pay-container">
+        <header class="pay-header">
+            <h1 id="payTo">Pagar a</h1>
+        </header>
+
+        <div class="amount-section">
+            <label for="amount">Monto a pagar (S/)</label>
+            <input type="number" id="amount" placeholder="0.00" step="0.01" min="0">
+            <div id="amountError" class="error-message">El monto ingresado no es válido</div>
+        </div>
+
+        <div class="message-section">
+            <label for="message">Agregar mensaje (opcional)</label>
+            <textarea id="message" placeholder="Escribe un mensaje"></textarea>
+        </div>
+
+        <div class="payment-options">
+            <button id="otherBanks" class="btn-secondary">OTROS BANCOS</button>
+            <button id="payNow" class="btn-primary">PAGAR</button>
+        </div>
+    </div>
+
+    <script src="pay.js"></script>
+</body>
+</html>

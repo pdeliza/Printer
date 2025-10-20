@@ -1,0 +1,894 @@
+/* Estilos generales */
+:root {
+    --title-color: #5b1f77;
+    --green-color: #28c9b5;
+    --subtitle-secondary: #2A2431;
+    --subtitle-tertiary: #282828;
+    --code-bg: #edecf1;
+    --code-tertiary: #6e6e70;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--green-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #f8d346;
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #dde1e6;
+}
+
+.btn-toggle {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+.large-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+/* Estilos para index.html (tabla) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    /* color: #333; */
+    color: var(--title-color)
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.entries-selector {
+    display: flex;
+    align-items: center;
+}
+
+.entries-selector select {
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.search-box input {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.data-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.table-info {
+    margin-bottom: 10px;
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button.active {
+    background-color: #ffde59;
+    border-color: #ffde59;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilos para billpay.html */
+.billpay-container {
+    padding-bottom: 80px; /* Espacio para los botones inferiores */
+}
+
+.billpay-header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.balance-amount {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.action-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+.action-icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.action-label {
+    font-size: 0.8rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.service-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+.service-icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.service-label {
+    font-size: 0.8rem;
+}
+
+.bottom-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para pay.html */
+.pay-container {
+    max-width: 500px;
+}
+
+.pay-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.amount-section, .message-section {
+    margin-bottom: 30px;
+}
+
+.amount-section label, .message-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.amount-section input, .message-section textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.message-section textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.error-message {
+    color: #dc3545;
+    margin-top: 5px;
+    display: none;
+}
+
+.payment-options {
+    display: flex;
+    gap: 15px;
+}
+
+.payment-options button {
+    flex: 1;
+}
+
+/* Estilos para voucher.html */
+.voucher-container {
+    /* background: url("img/background.jpg") no-repeat center center fixed; */
+    max-width: 500px;
+    /* background-color: brown; */
+    background: linear-gradient(to bottom, #4A1971, #4E1A73, #521B75, #571C77, #5A1D78, #5D1D79, #601E7B, #651F7D, #69207F, #6D2181, #6F2282, #742384);
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.voucher-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    height: 6rem; /*altura del card*/
+}
+
+.voucher-logo {
+    /* font-size: 1.5rem;
+    font-weight: bold;
+    color: #5b1f77;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    width: 120px;
+    height: auto;
+    transition: all 0.3s ease; */
+    /* width: 100%;
+    height: 100%;
+    object-fit: cover;  */
+    width: 120px; /* Ajusta este valor para cambiar el tamaño del logo */
+    height: 50px; /* Ajusta este valor para cambiar el tamaño del logo */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /* margin-left: 10px; */
+}
+
+.logo-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cambia de 'cover' a 'contain' para mejor ajuste */
+    max-width: 100%; /* Asegura que no se desborde */
+    max-height: 100%; /* Asegura que no se desborde */
+}
+
+.close-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8B3D99;
+    color: white;
+    border: transparent;
+    font-size: 2.2rem;
+    font-weight: 350;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 45px;
+}
+
+.close-button i {
+    line-height: 1; /* Asegura que el ícono esté bien centrado verticalmente */
+}
+
+.voucher-card {
+    background-color: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.voucher-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    margin-top: 7px;
+}
+
+.paid-text {
+    color: #8B3D99;
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    
+}
+
+.share-button {
+    background: none;
+    border: none;
+    color: #28c9b5;
+    /* font-weight: bold; */
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-right: 1px;
+    margin-top: 1px;
+}
+
+.share-button i{
+    /* font-weight: 550; */
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 5px; */
+    font-size: 1.1rem; /*1.6 rem*/
+}
+
+.amount-paid {
+    text-align: left;
+    position: relative;
+    display: inline-flex;
+    align-items: baseline; /* Alinea desde la base para mejor control */
+    vertical-align: middle; /* Centra verticalmente el contenedor */
+}
+
+.currency-symbol {
+    font-size: 2.2rem !important; /* Ajusta este valor para cambiar el tamaño del símbolo */
+    color: #333;
+    position: relative;
+    top: -0.4em; /* Convierte en superíndice */
+    vertical-align: super;
+    margin-right: 5px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+}
+
+.amount-paid span:last-child {
+    font-size: 3.4rem !important;
+    font-weight: 900;
+    color: #333333;
+    display: inline-block;
+    padding: 12px 0; /*2PX 0*/
+    font-family: 'Roboto', Arial, sans-serif;
+    letter-spacing: -1px;
+    line-height: 0.6; /* Controla la altura de la línea para reducir espacio */
+}
+
+.transaction-details {
+    margin-bottom: 14px;
+    padding: 0;
+    margin-top: -5px;
+}
+
+.message-icon {
+    width: 45px; /* Ajusta este valor para cambiar el tamaño del icono */
+    height: 45px; /* Ajusta este valor para cambiar el tamaño del icono */
+    object-fit: contain;
+}
+
+#transactionMessage {
+    font-size: 0.9rem;
+    color: #777;
+    /* margin-top: 6px; */
+    font-weight: bold;
+    font-family: 'Roboto', Arial, sans-serif;
+    align-items: center;
+    display: flex;
+    vertical-align: middle;
+}
+
+.material-symbols-outlined.message-icon {
+    width: 18px; /* Tamaño reducido */
+    height: 18px;
+    fill: #fff; /* Relleno blanco */
+    stroke: #777; /* Contornos en #777 */
+    stroke-width: 1.5; /* Grosor de las líneas (ajusta para las "rayas y media") */
+    padding: 4px; /* Espacio para fondo, si quieres */
+    background-color: #fff; /* Fondo blanco adicional */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+.detail-card {
+    /* background-color: #f8f9fa;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #FCF0FF, #F4F3FF ,#ECF6FF); */
+    background: linear-gradient(to right, #FCF0FF, #ECF6FF);
+    border-radius: 8px;
+    padding: 2px 15px;
+    margin-top: 7px;
+    align-items: center;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 8px;
+}
+
+
+.detail-item:last-child {
+    margin-bottom: 0px;
+}
+
+.detail-label {
+    color: #777;
+    width: 14px;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+/* Estilos específicos para bi bi-calendar4 */
+.fa-regular.fa-calendar {
+    font-size: 0.9rem; /* Tamaño del ícono */
+    margin-right: 3px; /* Espacio a la derecha */
+    vertical-align: middle; /* Alineación vertical */
+    stroke: #777 !important; /* Color de los contornos */
+    stroke-width: 2.5 !important; /* Grosor de los bordes (valor moderado para probar) */
+    fill: red !important; /* Intento de relleno blanco */
+    background-color: #fff; /* Fondo blanco como alternativa al fill */
+    padding: 3px; /* Espacio para que el fondo sea visible */
+    border-radius: 3px; /* Esquinas redondeadas para el fondo */
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 18px !important;
+    
+}
+
+/* Estilos específicos para bxr bx-clock-3 */
+.bxr.bx-clock-3 {
+    font-size: 1.1rem; /* Ajusta el tamaño */
+    font-weight: 400; /* Ajusta el grosor */
+    margin-right: 3px; /* Espacio entre ícono y texto */
+    vertical-align: middle; /* Alineación vertical */
+}
+
+.detail-value {
+    color: #333;
+    vertical-align: middle; /* Añade esta línea */
+    line-height: 1.7; /* Ajusta esta línea si es necesario */
+}
+
+.detail-item:nth-child(2) {
+    margin-top: -0.9rem; /* Ajusta este valor: -0.3rem, -0.5rem, -1rem, etc. */
+}
+
+#recipientName {
+    /* flex: 1; */
+    color: #333;
+    /* font-size: 22px;
+    font-weight: 500;
+    font-family: 'Roboto', Arial, sans-serif; */
+    /* color: #8B3D99; */
+    font-size: 1.45rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+#transactionDate {
+    font-size: 1rem;
+    color: #777;
+    /* margin-top: 6px; */
+    font-weight: bold;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.separator {
+    color: #777;
+    /* margin: 0 5px; */
+    font-size: 0.9rem;
+    font-weight: 900;
+    /* margin-top: -0.1rem; */
+}
+
+#transactionTime {
+    font-size: 1rem;
+    color: #777;
+    /* margin-top: 6px; */
+    font-weight: bold;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.security-section {
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+    padding: 8px 0;
+    margin-bottom: 20px;
+}
+
+.security-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.security-header h2 {
+    font-size: 0.8rem;
+    color: #777;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px; /*aleja el icono hacia la derecha*/
+    white-space: nowrap;
+    padding: 5px 0; /*aumenta el tamaño*/
+}
+
+.security-header i {
+    color: #28c9b5;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.security-code {
+    display: flex;
+    gap: 8px;
+    font-weight: bold;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.security-code span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0;
+    background-color: #EDEDEF; /*#f8f9fa*/
+    border-radius: 4px;
+    color: #333;
+    min-width: 30px;
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+    width: 28px;
+    height: 28px; /* Añade altura fija para forma cuadrada */
+    display: flex; /* Añade estas 3 líneas para centrado perfecto */
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction-info {
+    margin-top: 15px;
+    margin-bottom: -5px;
+}
+
+.transaction-info h2 {
+    font-size: 0.7rem;
+    color: #777;
+    text-align: left;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', Arial, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.info-label {
+    color: #4b4160;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.info-value {
+    color: #2c2044;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.voucher-actions {
+    margin-bottom: 20px;
+    width: 98%;
+    margin: 5% auto;
+}
+
+#newPayment {
+    /* width: 100%;
+    padding: 15px;
+    font-size: 1.1rem; */
+    width: 100%;
+    padding: 3px 15px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--green-color);
+    border-color: var(--green-color);
+    font-family: 'Roboto', Arial, sans-serif;;
+    /* font-size: 1rem; */
+}
+
+.advertising-video-container {
+    width: 100%;
+    height: 100%; /* Altura del video */
+    margin: 10px auto;
+    border-radius: 18px; /* Mismo radio que voucher-card */
+    overflow: hidden; /* Esencial para border-radius */
+    display: block !important;
+    transform: scale(1.05); /* Aumenta el contenedor un 20% */
+    transform-origin: center; /* Escala desde el centro */
+}
+
+/* VIDEO PUBLICITARIO */
+.advertising-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video al contenedor */
+    border-radius: 18px; /* Bordes redondeados */
+    object-fit: cover; /* Mantiene la proporción del video */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quick-actions, .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .table-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .table-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .payment-options {
+        flex-direction: column;
+    }
+
+    .voucher-logo {
+        top: 15px;
+        left: 15px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quick-actions, .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    .voucher-logo {
+        /* top: 30px;
+        left: 20px; */
+        height: 100px; /*32px*/
+        width: 90px; /*ajuste del logo*/
+        top: -10px; /* Asegura que no tenga desplazamiento */
+        left: -10px; /* Asegura que no tenga desplazamiento */
+        position: relative;
+    }
+
+    .voucher-container {
+        padding: 10px;
+    }
+
+    .voucher-card {
+        padding: 15px;
+        width: 98%; /*bajale el ancho*/
+        margin: 5% auto; /*este viene con el elemento anterior*/
+    }
+
+    .security-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .security-header h2 {
+        font-size: 0.7rem;
+        font-weight: bold;
+        font-family: 'Roboto', Arial, sans-serif;
+        color: #807F82;
+        gap: 8px; /*aleja el icono hacia la derecha*/
+        white-space: nowrap;
+        padding: 5px 0; /*aumenta el tamaño*/
+        letter-spacing: 0.5px;
+    }
+
+    .security-code {
+        /* align-self: flex-end; */
+        gap: 5px;
+    }
+
+    .security-code span {
+        font-size: 1.1rem;
+        padding: 5px 10px;
+        min-width: 27px;
+        font-weight: bold;
+        background-color: #EDEDEF; /*#f8f9fa*/
+        border-radius: 4px;
+        color: #333;
+        /* min-width: 30px; */
+        text-align: center;
+        font-family: 'Roboto', Arial, sans-serif;
+        width: 28px; /* Tamaño reducido para móviles */
+        height: 28px;
+    }
+
+    .amount-paid span:last-child {
+        font-size: 2rem; /* Tamaño reducido para móviles */
+    }
+
+    .currency-symbol {
+        font-size: 1rem; /* Tamaño reducido para móviles */
+    }
+
+    .message-icon {
+        width: 25px; /* Tamaño reducido para móviles */
+        height: 35px; /* Tamaño reducido para móviles */
+    }
+
+    .advertising-video-container {
+        height: 100%; /* Altura reducida para móvil */
+        margin: 40px auto;
+        padding: 0 10px;
+    }
+}
+
+/* Pequeños ajustes para dispositivos muy pequeños */
+@media (max-width: 320px) {
+    .voucher-logo {
+        width: 70px; /* Tamaño extra reducido para pantallas muy pequeñas */
+        height: 28px; /* Tamaño extra reducido para pantallas muy pequeñas */
+    }
+
+    .security-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .security-header h2 {
+        margin-bottom: 8px;
+    }
+
+}
