@@ -1,7 +1,7 @@
 // Datos de ejemplo
 let contacts = JSON.parse(localStorage.getItem('contacts')) || [
     { name: "Luz M. Sanchez T.", phone: "987654589", qrcode: "luz_sanchez_qr" },
-    { name: "María García", phone: "912345678", qrcode: "maria_garcia_qr" },
+    { name: "Felicita Vasquez T.", phone: "912345501", qrcode: "maria_garcia_qr" },
     { name: "Carlos López", phone: "934567890", qrcode: "carlos_lopez_qr" }
 ];
 
